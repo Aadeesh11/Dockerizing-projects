@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  frontend:
+    build: ./client
+    ports:
+      - "80:4200"
+  server:
+    restart: always
+    build: ./server
+    ports:
+     - "8080:8080"
+    environment:
+      - MONGO_URL=mongodb://db/mean-app
+    depends_on:
+      - db
+  db:
+    image: mongo
+    volumes:
+      - "./data/db/:/data/db"
+    ports:
+      - "27017:27107"
