@@ -1,4 +1,4 @@
 Demo app for blog post: Setup Meanstack App With Docker
 Meanstack app can be pulled from docker: chld/mean-app:1.0.
 Run project with 'docker-compose up'
-The app uses my waf implementation with ModSecurity core rule set chld/waf:1.0, which requires that the container are called app and is running on port 8080.
+The app uses waf implementation with ModSecurity core rule set chld/waf:1.0, which requires that the container are called app and is running on port 8080.
